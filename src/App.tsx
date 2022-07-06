@@ -1,43 +1,18 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import logo from "./logo.svg";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import TopBar from "./components/TopBar";
 
 function App() {
   return (
     <div className="App">
+      <TopBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
       </Routes>
     </div>
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <main>
-        <h2>Hello Emerald!</h2>
-      </main>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
-    </>
-  );
-}
-
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>That feels like an existential question, don't you think?</p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
   );
 }
 
