@@ -1,4 +1,4 @@
-import "./TopBar.css";
+import "./TopBar.scss";
 import { Drawer } from "./Drawer";
 import logo from "../assets/ph_logo.jpeg";
 

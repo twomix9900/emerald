@@ -4,22 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import DensityMedium from "@mui/icons-material/DensityMedium";
 
-const options = [
-  "None",
-  "Atria",
-  "Callisto",
-  "Dione",
-  "Ganymede",
-  "Hangouts Call",
-  "Luna",
-  "Oberon",
-  "Phobos",
-  "Pyxis",
-  "Sedna",
-  "Titania",
-  "Triton",
-  "Umbriel",
-];
+const options = ["PH_LINK_1", "PH_LINK_2", "PH_LINK_3"];
 
 function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
