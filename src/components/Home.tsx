@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import "./Home.scss";
 import YouTube, { YouTubeProps } from "react-youtube";
 import "animate.css";
-<<<<<<< HEAD
 import ph_gif from "../assets/ph_snuggles_gif.gif";
-=======
->>>>>>> 5074c2c (add a few packages, first rough draft of first page)
 // import YoutubeIframe from "./YoutubeIframe";
 
 function Home() {
