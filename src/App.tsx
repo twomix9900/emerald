@@ -1,18 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
-import About from "./components/About";
 import TopBar from "./components/TopBar";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (
-    <div className="App">
-      <TopBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-      </Routes>
-    </div>
+    <ParallaxProvider>
+      <div className="App">
+        <TopBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </ParallaxProvider>
   );
 }
 

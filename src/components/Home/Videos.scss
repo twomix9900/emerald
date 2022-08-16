@@ -1,0 +1,11 @@
+.videos-wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  height: 1000px;
+  justify-content: space-around;
+
+  .believe {
+    width: 100%;
+  }
+}

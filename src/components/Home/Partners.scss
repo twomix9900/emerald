@@ -1,0 +1,17 @@
+.partners-wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  height: 1000px;
+
+  .partners {
+    width: 100%;
+    text-align: center;
+  }
+
+  .r1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}

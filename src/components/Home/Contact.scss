@@ -1,0 +1,10 @@
+.contact-wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .form {
+    width: 75%;
+  }
+}
