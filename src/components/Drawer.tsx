@@ -3,8 +3,15 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import DensityMedium from "@mui/icons-material/DensityMedium";
+import "./Drawer.scss";
 
 const options = ["PH_LINK_1", "PH_LINK_2", "PH_LINK_3"];
+
+const hoverSX = {
+  "&:hover": {
+    color: "blue",
+  },
+};
 
 function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -17,7 +24,7 @@ function LongMenu() {
   };
 
   return (
-    <div>
+    <div className="drawer-wrapper">
       <IconButton
         aria-label="more"
         id="long-button"
@@ -38,7 +45,7 @@ function LongMenu() {
         onClose={handleClose}
         PaperProps={{
           style: {
-            maxHeight: "100%",
+            height: "100%",
             width: "100%",
           },
         }}
@@ -48,6 +55,7 @@ function LongMenu() {
             key={option}
             selected={option === "Pyxis"}
             onClick={handleClose}
+            sx={hoverSX}
           >
             {option}
           </MenuItem>

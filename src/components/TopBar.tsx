@@ -11,9 +11,6 @@ function TopBar() {
       <div className="right">
         <Drawer />
       </div>
-      {/* <nav>
-        <Link to="/about">About</Link>
-      </nav> */}
     </div>
   );
 }
