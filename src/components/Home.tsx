@@ -20,9 +20,6 @@ function Home() {
         <Videos />
         <Partners />
         <Contact />
-        {/* <nav>
-        <Link to="/about">About</Link>
-      </nav> */}
         <Footer />
       </div>
     </Container>

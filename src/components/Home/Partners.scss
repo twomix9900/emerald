@@ -3,15 +3,21 @@
   width: 100%;
   flex-flow: row wrap;
   height: 1000px;
+  margin: 200px 0;
 
   .partners {
     width: 100%;
     text-align: center;
+    font-size: 48px;
   }
 
   .r1 {
     display: flex;
     width: 100%;
     justify-content: space-around;
+  }
+
+  .hover-bounce:hover {
+    animation-name: bounce; // Predefined in animate.css
   }
 }

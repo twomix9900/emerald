@@ -12,7 +12,7 @@ function Intro() {
             <h3 className="l1 animate__animated animate__slideInDown">
               Hello,
             </h3>
-            <h3 className="l2 animate__animated animate__fadeIn animate__delay-2s">
+            <h3 className="l2 animate__animated animate__fadeIn animate__delay-1s">
               My name is Emerald
             </h3>
             <h3 className="l3 animate__animated animate__fadeIn animate__delay-2s">
@@ -20,7 +20,11 @@ function Intro() {
             </h3>
           </div>
           <div className="right">
-            <img src={ph_gif} alt="loading..." />
+            <img
+              className="animate__animated hover-bounce"
+              src={ph_gif}
+              alt="loading..."
+            />
           </div>
         </div>
       </div>

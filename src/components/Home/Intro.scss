@@ -18,13 +18,6 @@
     margin: 10px;
   }
 
-  h3.l2.animate__fadeIn,
-  h3.l3.animate__fadeIn {
-    // animation: "fadeIn";
-    // animation-duration: 15s;
-    // animation-delay: 1.5s; not sure why this doesn't work when deployed
-  }
-
   .left {
     width: 60%;
     display: flex;
@@ -38,5 +31,9 @@
     flex-flow: row wrap;
     justify-content: flex-end;
     padding-right: 10%;
+  }
+
+  .hover-bounce:hover {
+    animation-name: bounce; // Predefined in animate.css
   }
 }
