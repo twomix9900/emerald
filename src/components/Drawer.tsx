@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import DensityMedium from "@mui/icons-material/DensityMedium";
+import CloseIcon from "@mui/icons-material/Close";
 import "./Drawer.scss";
 
 const options = ["PH_LINK_1", "PH_LINK_2", "PH_LINK_3"];
@@ -50,6 +51,13 @@ function LongMenu() {
           },
         }}
       >
+        <div
+          style={{ display: "flex", width: "100%", justifyContent: "flex-end" }}
+        >
+          <IconButton onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </div>
         {options.map((option) => (
           <MenuItem
             key={option}
