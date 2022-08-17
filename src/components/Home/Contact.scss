@@ -7,4 +7,14 @@
   .form {
     width: 75%;
   }
+
+  .left {
+    width: 50%;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+
+  .right {
+    width: 50%;
+  }
 }

@@ -35,50 +35,77 @@ function Contact() {
   return (
     <Container>
       <div className="contact-wrapper">
-        <Box
-          component="form"
-          noValidate
-          autoComplete="off"
-          onSubmit={sendEmail}
-          className="form"
-        >
-          <Stack spacing={2}>
-            <TextField
-              type="text"
-              name="name"
-              label="Name"
-              variant="standard"
-            />
-            <TextField
-              type="email"
-              name="email"
-              label="Email"
-              variant="standard"
-            />
-            <TextField
-              type="text"
-              name="phone"
-              label="Phone"
-              variant="standard"
-            />
-            <TextField
-              type="text"
-              name="subject"
-              label="Subject"
-              variant="standard"
-            />
-            <TextField
-              type="text"
-              name="message"
-              label="Message"
-              variant="standard"
-            />
+        <div className="left">
+          <Box
+            component="form"
+            noValidate
+            autoComplete="off"
+            onSubmit={sendEmail}
+            className="form"
+            sx={{
+              border: "1px solid grey",
+              padding: "15px",
+            }}
+          >
+            <Stack spacing={2}>
+              <h2>Contact</h2>
+              <h2>Emerald</h2>
+              <h2>emerald.business.email.ph@gmail.com</h2>
+              <h2>808-808-8080</h2>
+              <h2>www.google.com</h2>
+            </Stack>
+          </Box>
+        </div>
+        <div className="right">
+          <Box
+            component="form"
+            noValidate
+            autoComplete="off"
+            onSubmit={sendEmail}
+            className="form"
+            sx={{
+              border: "1px solid grey",
+              padding: "15px",
+            }}
+          >
+            <Stack spacing={2}>
+              <TextField
+                type="text"
+                name="name"
+                label="Name"
+                variant="standard"
+              />
+              <TextField
+                type="email"
+                name="email"
+                label="Email"
+                variant="standard"
+              />
+              <TextField
+                type="text"
+                name="phone"
+                label="Phone"
+                variant="standard"
+              />
+              <TextField
+                type="text"
+                name="subject"
+                label="Subject"
+                variant="standard"
+              />
+              <TextField
+                type="text"
+                name="message"
+                label="Message"
+                variant="standard"
+              />
 
-            <Button type="submit" variant="outlined">
-              Send
-            </Button>
-          </Stack>
-        </Box>
+              <Button type="submit" variant="outlined">
+                Send Inquiry
+              </Button>
+            </Stack>
+          </Box>
+        </div>
       </div>
     </Container>
   );
