@@ -1,6 +1,6 @@
 import "./TopBar.scss";
 import { Drawer } from "./Drawer";
-import logo from "../assets/ph_logo.jpeg";
+import logo from "../../assets/ph_logo.jpeg";
 
 function TopBar() {
   return (

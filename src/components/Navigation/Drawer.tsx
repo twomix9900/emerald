@@ -4,24 +4,39 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import DensityMedium from "@mui/icons-material/DensityMedium";
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Drawer.scss";
+import DrawerVideoCanvas from "./DrawerVideoCanvas";
+import { useState } from "react";
+import { videos, phVideos } from "../Data/MenuVideoList";
 
-const options = ["PH_LINK_1", "PH_LINK_2", "PH_LINK_3"];
-
-const hoverSX = {
+const menuItemHoverSX = {
   "&:hover": {
-    color: "blue",
+    backgroundColor: "transparent",
+  },
+  "button#arrow-button": {
+    left: "-100%",
+    transitionDuration: "0.3s",
+    transitionProperty: "left",
+  },
+  "&:hover > button#arrow-button": {
+    left: "0",
   },
 };
 
 function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const [currentVideo, setCurrentVideo] = useState({ hide: true });
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
+    setCurrentVideo({ hide: true });
+  };
+  const handleMouseOver = (video: any) => {
+    setCurrentVideo(video);
   };
 
   return (
@@ -51,6 +66,8 @@ function LongMenu() {
           },
         }}
       >
+        {!currentVideo.hide && <DrawerVideoCanvas video={currentVideo} />}
+
         <div
           style={{ display: "flex", width: "100%", justifyContent: "flex-end" }}
         >
@@ -58,15 +75,32 @@ function LongMenu() {
             <CloseIcon />
           </IconButton>
         </div>
-        {options.map((option) => (
+        {videos.map((video) => (
           <MenuItem
-            key={option}
-            selected={option === "Pyxis"}
+            key={video.title}
             onClick={handleClose}
-            sx={hoverSX}
+            sx={menuItemHoverSX}
+            onMouseOver={() => handleMouseOver(video)}
           >
-            {option}
+            <IconButton
+              aria-label="more"
+              id="arrow-button"
+              aria-haspopup="true"
+            >
+              <ArrowForwardIcon />
+            </IconButton>
+            {video.title}
           </MenuItem>
+        ))}
+        {/* TBD not sure if this should be left in here yet */}
+        {phVideos.map((fillerVideo, idx) => (
+          <li
+            key={idx}
+            onMouseOver={() => handleMouseOver(fillerVideo)}
+            style={{ scale: 0 }}
+          >
+            {`${" "}`}
+          </li>
         ))}
       </Menu>
     </div>

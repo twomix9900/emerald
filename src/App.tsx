@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
-import TopBar from "./components/TopBar";
+import TopBar from "./components/Navigation/TopBar";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {

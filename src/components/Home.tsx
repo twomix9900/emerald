@@ -10,7 +10,7 @@ import Intro from "./Home/Intro";
 import Partners from "./Home/Partners";
 import Contact from "./Home/Contact";
 import Container from "@mui/material/Container";
-import Footer from "./Footer";
+import Footer from "./Navigation/Footer";
 
 function Home() {
   return (
